@@ -2,7 +2,9 @@
 
 A graduation project that explores how surface electromyography (**sEMG**) signals can be transformed into reliable hand-gesture predictions using signal processing, feature engineering, and deep learning.
 
-The best-performing model achieved approximately **97.9% classification accuracy** on the project dataset.
+The academic project reported approximately **97.9% classification accuracy**. The original train/test split is not documented in this public repository, so the result should not be interpreted as accuracy on unseen participants.
+
+This repository currently provides a project overview and a solution file; it does not contain the full training pipeline or a reproducible evaluation.
 
 ## Project at a glance
 
@@ -16,7 +18,7 @@ The best-performing model achieved approximately **97.9% classification accuracy
 | Windowing | 500 ms windows with 50% overlap |
 | Feature set | 28 time- and frequency-domain features |
 | Models explored | CNN, RNN, and Bidirectional LSTM |
-| Best result | ~97.9% accuracy |
+| Historical result | ~97.9% reported accuracy; evaluation split not documented |
 
 ## The problem
 
@@ -58,7 +60,7 @@ The project compared architectures suited to spatial and temporal pattern learni
 - **RNN:** models sequential relationships between signal windows
 - **Bidirectional LSTM:** uses context from both directions of a sequence
 
-The strongest configuration reached approximately **97.9% accuracy**, demonstrating that the extracted sEMG features contained highly discriminative information for the gesture classes in the academic dataset.
+The strongest configuration was reported at approximately **97.9% accuracy** in the academic work. Without the original split and a reproducible evaluation, that number does not establish participant-independent generalization.
 
 ## What I learned
 
@@ -71,7 +73,7 @@ The strongest configuration reached approximately **97.9% accuracy**, demonstrat
 
 ## Limitations
 
-The result was obtained on a controlled academic dataset. A production system would require additional validation across unseen participants, different sensor placements and hardware, motion artifacts, and real-time inference constraints.
+The result was obtained on a controlled academic dataset, and the original split is not documented here. Overlapping windows from the same recording can share information, so a new evaluation should split by participant or recording before windowing and keep held-out data separate. Further validation would need unseen participants, different sensor placements and hardware, motion artifacts, and real-time inference measurements.
 
 ## Next steps
 
@@ -84,6 +86,7 @@ The result was obtained on a controlled academic dataset. A production system wo
 ## Author
 
 **Salsabeel Alfayoumi**  
-Computer Engineer focused on Python, applied AI, data analysis, and intelligent systems.
+Computer Engineering graduate building Python APIs, data workflows and analytics applications.
 
 [Portfolio](https://salfayoumi.github.io/) · [GitHub profile](https://github.com/salfayoumi)
+
